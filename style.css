@@ -1,0 +1,204 @@
+/* ================================= */
+/* GENERAL */
+/* ================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ================================= */
+/* NAVBAR */
+/* ================================= */
+
+.meal-navbar {
+    height: 60px;
+
+    background-color: #ed5b16;
+
+    padding: 0 24px;
+}
+
+
+/* ================================= */
+/* LOGO */
+/* ================================= */
+
+.meal-logo {
+    color: white !important;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+}
+
+.meal-logo i {
+    font-size: 18px;
+}
+
+
+/* ================================= */
+/* MENU ICON */
+/* ================================= */
+
+.menu-icon {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+
+    border: 2px solid black;
+    border-radius: 4px;
+
+    padding: 4px 7px;
+
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-icon:hover {
+    color: #ffe0d0;
+}
+
+
+/* ================================= */
+/* HIDE CHECKBOX */
+/* ================================= */
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* ================================= */
+/* SIDE MENU */
+/* ================================= */
+
+.side-menu {
+
+    position: fixed;
+
+    top: 0;
+    right: -300px;
+
+    width: 285px;
+    height: 100vh;
+
+    background-color: white;
+
+    z-index: 1000;
+
+    padding: 20px 24px;
+
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s ease;
+}
+
+
+/* ================================= */
+/* OPEN MENU */
+/* ================================= */
+
+/* When checkbox is checked */
+
+.menu-toggle:checked ~ .side-menu {
+
+    right: 0;
+}
+
+
+/* ================================= */
+/* CLOSE BUTTON */
+/* ================================= */
+
+.close-menu {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    color: #ed5b16;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    margin-bottom: 25px;
+}
+
+.close-menu:hover {
+    color: #c74608;
+}
+
+
+/* ================================= */
+/* CATEGORY LIST */
+/* ================================= */
+
+.category-list {
+
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ================================= */
+/* CATEGORY ITEM */
+/* ================================= */
+
+.category-list li {
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* ================================= */
+/* CATEGORY LINK */
+/* ================================= */
+
+.category-list li a {
+
+    display: block;
+
+    text-decoration: none;
+
+    color: #555;
+
+    font-size: 15px;
+
+    padding: 11px 0;
+
+    transition: 0.2s ease;
+}
+
+
+/* ================================= */
+/* HOVER */
+/* ================================= */
+
+.category-list li a:hover {
+
+    color: #ed5b16;
+
+    padding-left: 8px;
+
+    background-color: #fafafa;
+}

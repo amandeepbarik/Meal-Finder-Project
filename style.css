@@ -58,8 +58,6 @@ body {
     color: white;
     font-size: 24px;
     cursor: pointer;
-
-    border: 2px solid black;
     border-radius: 4px;
 
     padding: 4px 7px;
@@ -73,6 +71,7 @@ body {
 
 .menu-icon:hover {
     color: #ffe0d0;
+    border: 2px solid black;
 }
 
 
@@ -201,4 +200,67 @@ body {
     padding-left: 8px;
 
     background-color: #fafafa;
+}
+
+/* Hero Section Styling */
+.hero-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                url('/assets/images/header_image.1dc0f346d407fc577d16.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 70px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.search-box-container {
+    max-width: 550px;
+    margin: 0 auto 25px auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 22px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* Search Button with 1-Second Hover Transition Delay */
+.search-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #e65100; /* Saffron base color */
+    color: #ffffff;           /* White Icon */
+    border: 2px solid #e65100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 1s ease-in-out; /* 1s delay transition */
+}
+
+.search-btn:hover {
+    background-color: #ffffff; /* Turns White on hover */
+    color: #e65100;            /* Icon turns Saffron */
+    border-color: #f8f5f4;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.hero-subtitle {
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.9;
 }

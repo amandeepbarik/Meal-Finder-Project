@@ -264,3 +264,90 @@ body {
     text-transform: uppercase;
     opacity: 0.9;
 }
+/* Categories Grid Section Styling */
+.categories-container {
+    max-width: 1140px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.title-underline {
+    width: 60px;
+    height: 4px;
+    background-color: #e65100;
+    margin-bottom: 30px;
+    border-radius: 2px;
+}
+
+/* 4-Column Grid Layout */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Category Card Styling */
+.category-card {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.category-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #e65100;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.card-img-wrapper {
+    width: 100%;
+    max-width: 140px;
+    margin-top: 15px;
+}
+
+.category-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Responsive Grid for Smaller Screens */
+@media (max-width: 992px) {
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+}

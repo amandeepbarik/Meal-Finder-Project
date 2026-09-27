@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Finder - Vegetarian Category</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Top Navigation Header -->
+    <header class="top-navbar">
+        <a href="index.html" class="brand-logo">
+            <i class="fa-solid fa-utensils"></i>
+            <span>MEAL FINDER</span>
+        </a>
+        <button class="menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Sidebar Drawer -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="sidebar">
+        <div class="offcanvas-header justify-content-end">
+            <button type="button" class="btn-close text-danger" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fa-regular fa-circle-xmark fs-3 text-danger"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body pt-0">
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-link">Beef</a>
+                <a href="#" class="sidebar-link">Chicken</a>
+                <a href="#" class="sidebar-link">Dessert</a>
+                <a href="#" class="sidebar-link">Lamb</a>
+                <a href="#" class="sidebar-link">Miscellaneous</a>
+                <a href="#" class="sidebar-link">Pasta</a>
+                <a href="#" class="sidebar-link">Pork</a>
+                <a href="#" class="sidebar-link">Seafood</a>
+                <a href="#" class="sidebar-link">Side</a>
+                <a href="#" class="sidebar-link">Starter</a>
+                <a href="#" class="sidebar-link">Vegan</a>
+                <a href="vegetarian.html" class="sidebar-link fw-bold text-success">Vegetarian</a>
+                <a href="#" class="sidebar-link">Breakfast</a>
+                <a href="#" class="sidebar-link">Goat</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="search-box-container">
+            <input type="text" class="search-input" placeholder="Search recipes here ...">
+            <button class="search-btn" type="button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <h1 class="hero-title">What are your favorite cuisines?</h1>
+        <p class="hero-subtitle">PERSONALIZE YOUR EXPERIENCE</p>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="categories-container">
+
+        <!-- Category Summary Card -->
+        <div class="category-info-card">
+            <h2 class="category-info-title">Vegetarian</h2>
+            <p class="category-info-text">
+                Vegetarianism is the practice of abstaining from the consumption of meat (red meat, poultry, seafood,
+                and the flesh of any other animal), and it may also include abstention from by-products of animal
+                slaughter. Vegetarianism may be adopted for various reasons. Many people object to eating meat out of
+                respect for sentient life.
+            </p>
+        </div>
+
+        <!-- Meals Grid Section -->
+        <h3 class="section-title">MEALS</h3>
+        <div class="title-underline"></div>
+
+        <div class="meals-grid">
+
+            <!-- Meal Card 1: Baingan Bharta (Linked to Page 3) -->
+            <a href="meal-details.html" class="meal-card">
+                <div class="meal-img-box">
+                    <img src="/assets//images/wqurxy1511453156.jpg" alt="Baingan Bharta">
+                </div>
+                <div class="meal-card-title">Baingan Bharta</div>
+            </a>
+
+            <!-- Meal Card 2 -->
+            <div class="meal-card">
+                <div class="meal-img-box">
+                    <img src="/assets/images/vpxyqt1511464175.jpg" alt="Dal Makhani">
+                </div>
+                <div class="meal-card-title">Dal Makhani</div>
+            </div>
+
+            <!-- Meal Card 3 -->
+            <div class="meal-card">
+                <div class="meal-img-box">
+                    <img src="" alt="Matar Paneer">
+                </div>
+                <div class="meal-card-title">Matar Paneer</div>
+            </div>
+
+            <!-- Meal Card 4 -->
+            <div class="meal-card">
+                <div class="meal-img-box">
+                    <img src="/assets//images/wrpwuu1511786491.jpg" alt="Kadai Paneer">
+                </div>
+                <div class="meal-card-title">Kadai Paneer</div>
+            </div>
+
+            <!-- Meal Card 5 -->
+            <div class="meal-card">
+                <div class="meal-img-box">
+                    <img src="" alt="Rajma Chawal">
+                </div>
+                <div class="meal-card-title">Rajma Chawal</div>
+            </div>
+
+        </div>
+
+    </main>
+
+    
+
+</html>

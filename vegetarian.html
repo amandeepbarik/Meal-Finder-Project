@@ -4,131 +4,701 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meal Finder - Vegetarian Category</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+
+    <title>Vegetarian Meals | Meal Finder</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Vegetarian Page CSS -->
+    <link rel="stylesheet" href="vegetarian.css">
 </head>
 
 <body>
 
-    <!-- Top Navigation Header -->
-    <header class="top-navbar">
-        <a href="index.html" class="brand-logo">
-            <i class="fa-solid fa-utensils"></i>
-            <span>MEAL FINDER</span>
-        </a>
-        <button class="menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-    </header>
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
 
-    <!-- Sidebar Drawer -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="sidebar">
-        <div class="offcanvas-header justify-content-end">
-            <button type="button" class="btn-close text-danger" data-bs-dismiss="offcanvas" aria-label="Close">
-                <i class="fa-regular fa-circle-xmark fs-3 text-danger"></i>
-            </button>
-        </div>
-        <div class="offcanvas-body pt-0">
-            <nav class="sidebar-nav">
-                <a href="#" class="sidebar-link">Beef</a>
-                <a href="#" class="sidebar-link">Chicken</a>
-                <a href="#" class="sidebar-link">Dessert</a>
-                <a href="#" class="sidebar-link">Lamb</a>
-                <a href="#" class="sidebar-link">Miscellaneous</a>
-                <a href="#" class="sidebar-link">Pasta</a>
-                <a href="#" class="sidebar-link">Pork</a>
-                <a href="#" class="sidebar-link">Seafood</a>
-                <a href="#" class="sidebar-link">Side</a>
-                <a href="#" class="sidebar-link">Starter</a>
-                <a href="#" class="sidebar-link">Vegan</a>
-                <a href="vegetarian.html" class="sidebar-link fw-bold text-success">Vegetarian</a>
-                <a href="#" class="sidebar-link">Breakfast</a>
-                <a href="#" class="sidebar-link">Goat</a>
-            </nav>
-        </div>
-    </div>
+    <header class="meal-navbar">
 
-    <!-- Hero Banner -->
-    <section class="hero-banner">
-        <div class="search-box-container">
-            <input type="text" class="search-input" placeholder="Search recipes here ...">
-            <button class="search-btn" type="button">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </div>
-        <h1 class="hero-title">What are your favorite cuisines?</h1>
-        <p class="hero-subtitle">PERSONALIZE YOUR EXPERIENCE</p>
-    </section>
+        <div class="navbar-content">
 
-    <!-- Main Content Area -->
-    <main class="categories-container">
-
-        <!-- Category Summary Card -->
-        <div class="category-info-card">
-            <h2 class="category-info-title">Vegetarian</h2>
-            <p class="category-info-text">
-                Vegetarianism is the practice of abstaining from the consumption of meat (red meat, poultry, seafood,
-                and the flesh of any other animal), and it may also include abstention from by-products of animal
-                slaughter. Vegetarianism may be adopted for various reasons. Many people object to eating meat out of
-                respect for sentient life.
-            </p>
-        </div>
-
-        <!-- Meals Grid Section -->
-        <h3 class="section-title">MEALS</h3>
-        <div class="title-underline"></div>
-
-        <div class="meals-grid">
-
-            <!-- Meal Card 1: Baingan Bharta (Linked to Page 3) -->
-            <a href="meal-details.html" class="meal-card">
-                <div class="meal-img-box">
-                    <img src="/assets//images/wqurxy1511453156.jpg" alt="Baingan Bharta">
-                </div>
-                <div class="meal-card-title">Baingan Bharta</div>
+            <!-- Logo -->
+            <a href="index.html" class="meal-logo">
+                <i class="bi bi-house-door-fill"></i>
+                <span>MEAL FINDER</span>
             </a>
 
-            <!-- Meal Card 2 -->
-            <div class="meal-card">
-                <div class="meal-img-box">
-                    <img src="/assets/images/vpxyqt1511464175.jpg" alt="Dal Makhani">
-                </div>
-                <div class="meal-card-title">Dal Makhani</div>
-            </div>
+            <!-- CSS Menu Toggle -->
+            <input
+                type="checkbox"
+                id="menu-toggle"
+                class="menu-toggle"
+            >
 
-            <!-- Meal Card 3 -->
-            <div class="meal-card">
-                <div class="meal-img-box">
-                    <img src="" alt="Matar Paneer">
-                </div>
-                <div class="meal-card-title">Matar Paneer</div>
-            </div>
-
-            <!-- Meal Card 4 -->
-            <div class="meal-card">
-                <div class="meal-img-box">
-                    <img src="/assets//images/wrpwuu1511786491.jpg" alt="Kadai Paneer">
-                </div>
-                <div class="meal-card-title">Kadai Paneer</div>
-            </div>
-
-            <!-- Meal Card 5 -->
-            <div class="meal-card">
-                <div class="meal-img-box">
-                    <img src="" alt="Rajma Chawal">
-                </div>
-                <div class="meal-card-title">Rajma Chawal</div>
-            </div>
+            <!-- Hamburger -->
+            <label
+                for="menu-toggle"
+                class="menu-button"
+                aria-label="Open menu"
+            >
+                <i class="bi bi-list"></i>
+            </label>
 
         </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         SIDE MENU
+    ====================================================== -->
+
+    <aside class="side-menu">
+
+        <!-- Close -->
+        <label
+            for="menu-toggle"
+            class="close-button"
+            aria-label="Close menu"
+        >
+            <i class="bi bi-x-circle"></i>
+        </label>
+
+        <nav class="side-navigation">
+
+            <a href="#" class="side-link">Beef</a>
+            <a href="#" class="side-link">Chicken</a>
+            <a href="#" class="side-link">Dessert</a>
+            <a href="#" class="side-link">Lamb</a>
+            <a href="#" class="side-link">Miscellaneous</a>
+            <a href="#" class="side-link">Pasta</a>
+            <a href="#" class="side-link">Pork</a>
+            <a href="#" class="side-link">Seafood</a>
+            <a href="#" class="side-link">Side</a>
+            <a href="#" class="side-link">Starter</a>
+            <a href="#" class="side-link">Vegan</a>
+
+            <a
+                href="vegetarian.html"
+                class="side-link active-link"
+            >
+                Vegetarian
+            </a>
+
+            <a href="#" class="side-link">Breakfast</a>
+            <a href="#" class="side-link">Goat</a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+
+    <section class="hero-section">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <!-- Search -->
+            <form
+                class="search-form"
+                action="#"
+                method="get"
+            >
+
+                <input
+                    type="text"
+                    name="q"
+                    class="search-input"
+                    value="pasta"
+                    placeholder="Search recipes here ..."
+                >
+
+                <button
+                    type="submit"
+                    class="search-button"
+                    aria-label="Search"
+                >
+                    <i class="bi bi-search"></i>
+                </button>
+
+            </form>
+
+            <h1 class="hero-title">
+                What are your favorite cuisines?
+            </h1>
+
+            <p class="hero-subtitle">
+                PERSONALIZE YOUR EXPERIENCE
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="vegetarian-main">
+
+
+        <!-- =================================================
+             VEGETARIAN DESCRIPTION
+        ================================================== -->
+
+        <section class="vegetarian-description">
+
+            <h2>Vegetarian</h2>
+
+            <p>
+                Vegetarianism is the practice of abstaining from the
+                consumption of meat (red meat, poultry, seafood, and the
+                flesh of any other animal), and may also include abstention
+                from by-products of animal slaughter. Vegetarianism may be
+                adopted for various reasons. Many people object to eating
+                meat out of respect for sentient life. Such ethical
+                motivations have been codified under various religious
+                beliefs, as well as animal rights advocacy. Other motivations
+                for vegetarianism are health-related, political,
+                environmental, cultural, aesthetic, economic, or personal
+                preference. There are variations of the diet as well:
+                an ovo-lacto vegetarian diet includes both eggs and dairy
+                products, an ovo-vegetarian diet includes eggs but not dairy
+                products, and a lacto-vegetarian diet includes dairy products
+                but not eggs. A vegan diet excludes all animal products,
+                including eggs and dairy. Some vegans also avoid other animal
+                products such as beeswax, leather or silk clothing, and
+                goose-fat shoe polish.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             MEALS
+        ================================================== -->
+
+        <section class="meals-section">
+
+            <h2 class="section-heading">
+                MEALS
+            </h2>
+
+            <div class="section-line"></div>
+
+
+            <!-- ================= MEALS GRID ================= -->
+
+            <div class="meals-grid">
+
+
+                <!-- 01 Baingan Bharta -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Baingan Bharta.jpg"
+                        alt="Baingan Bharta"
+                    >
+                    <div class="meal-name">
+                        Baingan Bharta
+                    </div>
+                </a>
+
+
+                <!-- 02 Beetroot Soup -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Beetroot Soup (Borscht).jpg"
+                        alt="Beetroot Soup Borscht"
+                    >
+                    <div class="meal-name">
+                        Beetroot Soup (Borscht)
+                    </div>
+                </a>
+
+
+                <!-- 03 Cabbage Soup -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Cabbage Soup (Shchi).jpg"
+                        alt="Cabbage Soup Shchi"
+                    >
+                    <div class="meal-name">
+                        Cabbage Soup (Shchi)
+                    </div>
+                </a>
+
+
+                <!-- 04 Chickpea Fajitas -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Chickpea Fajitas.jpg"
+                        alt="Chickpea Fajitas"
+                    >
+                    <div class="meal-name">
+                        Chickpea Fajitas
+                    </div>
+                </a>
+
+
+                <!-- 05 Crispy Eggplant -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Crispy Eggplant.jpg"
+                        alt="Crispy Eggplant"
+                    >
+                    <div class="meal-name">
+                        Crispy Eggplant
+                    </div>
+                </a>
+
+
+                <!-- 06 Dal Fry -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Dal Fry.jpg"
+                        alt="Dal Fry"
+                    >
+                    <div class="meal-name">
+                        Dal fry
+                    </div>
+                </a>
+
+
+                <!-- 07 Egg Drop Soup -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Egg Drop Soup.jpg"
+                        alt="Egg Drop Soup"
+                    >
+                    <div class="meal-name">
+                        Egg Drop Soup
+                    </div>
+                </a>
+
+
+                <!-- 08 Eggplant Adobo -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Eggplant Adobo.jpg"
+                        alt="Eggplant Adobo"
+                    >
+                    <div class="meal-name">
+                        Eggplant Adobo
+                    </div>
+                </a>
+
+
+                <!-- 09 Flamiche -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Flamiche.jpg"
+                        alt="Flamiche"
+                    >
+                    <div class="meal-name">
+                        Flamiche
+                    </div>
+                </a>
+
+
+                <!-- 10 Ful Medames -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Ful Medames.jpg"
+                        alt="Ful Medames"
+                    >
+                    <div class="meal-name">
+                        Ful Medames
+                    </div>
+                </a>
+
+
+                <!-- 11 Gigantes Plaki -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Gigantes Plaki.jpg"
+                        alt="Gigantes Plaki"
+                    >
+                    <div class="meal-name">
+                        Gigantes Plaki
+                    </div>
+                </a>
+
+
+                <!-- 12 Grilled Eggplant -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Grilled eggplant with coconut milk.jpg"
+                        alt="Grilled eggplant with coconut milk"
+                    >
+                    <div class="meal-name">
+                        Grilled eggplant with coconut milk
+                    </div>
+                </a>
+
+
+                <!-- 13 Kafteji -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Kafteji.jpg"
+                        alt="Kafteji"
+                    >
+                    <div class="meal-name">
+                        Kafteji
+                    </div>
+                </a>
+
+
+                <!-- 14 Kidney Bean Curry -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Kidney Bean Curry.jpg"
+                        alt="Kidney Bean Curry"
+                    >
+                    <div class="meal-name">
+                        Kidney Bean Curry
+                    </div>
+                </a>
+
+
+                <!-- 15 Koshari -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Koshari.jpg"
+                        alt="Koshari"
+                    >
+                    <div class="meal-name">
+                        Koshari
+                    </div>
+                </a>
+
+
+                <!-- 16 Leblebi Soup -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Leblebi Soup.jpg"
+                        alt="Leblebi Soup"
+                    >
+                    <div class="meal-name">
+                        Leblebi Soup
+                    </div>
+                </a>
+
+
+                <!-- 17 Matar Paneer -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Matar Paneer.jpg"
+                        alt="Matar Paneer"
+                    >
+                    <div class="meal-name">
+                        Matar Paneer
+                    </div>
+                </a>
+
+
+                <!-- 18 Moroccan Carrot Soup -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Moroccan Carrot Soup.jpg"
+                        alt="Moroccan Carrot Soup"
+                    >
+                    <div class="meal-name">
+                        Moroccan Carrot Soup
+                    </div>
+                </a>
+
+
+                <!-- 19 Mushroom Chestnut Rotolo -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Mushroom and Chestnut Rotolo.jpg"
+                        alt="Mushroom and Chestnut Rotolo"
+                    >
+                    <div class="meal-name">
+                        Mushroom &amp; Chestnut Rotolo
+                    </div>
+                </a>
+
+
+                <!-- 20 Potato Salad -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Potato Salad (Olivier Salad).jpg"
+                        alt="Potato Salad Olivier Salad"
+                    >
+                    <div class="meal-name">
+                        Potato Salad (Olivier Salad)
+                    </div>
+                </a>
+
+
+                <!-- 21 Provencal Omelette -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Provencal Omelette Cake.jpg"
+                        alt="Provencal Omelette Cake"
+                    >
+                    <div class="meal-name">
+                        Provençal Omelette Cake
+                    </div>
+                </a>
+
+
+                <!-- 22 Ratatouille -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Ratatouille.jpg"
+                        alt="Ratatouille"
+                    >
+                    <div class="meal-name">
+                        Ratatouille
+                    </div>
+                </a>
+
+
+                <!-- 23 Ribollita -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Ribollita.jpg"
+                        alt="Ribollita"
+                    >
+                    <div class="meal-name">
+                        Ribollita
+                    </div>
+                </a>
+
+
+                <!-- 24 Roasted Eggplant -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Roasted Eggplant With Tahini, Pine Nuts, and Lentils.jpg"
+                        alt="Roasted Eggplant With Tahini Pine Nuts and Lentils"
+                    >
+                    <div class="meal-name">
+                        Roasted Eggplant With Tahini, Pine Nuts, and Lentils
+                    </div>
+                </a>
+
+
+                <!-- 25 Shakshuka -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Shakshuka.jpg"
+                        alt="Shakshuka"
+                    >
+                    <div class="meal-name">
+                        Shakshuka
+                    </div>
+                </a>
+
+
+                <!-- 26 Smoky Lentil Chili -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Smoky Lentil Chili with Squash.jpg"
+                        alt="Smoky Lentil Chili with Squash"
+                    >
+                    <div class="meal-name">
+                        Smoky Lentil Chili with Squash
+                    </div>
+                </a>
+
+
+                <!-- 27 Spanish Tortilla -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Spanish Tortilla.jpg"
+                        alt="Spanish Tortilla"
+                    >
+                    <div class="meal-name">
+                        Spanish Tortilla
+                    </div>
+                </a>
+
+
+                <!-- 28 Spicy Arrabiata Penne -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Spicy Arrabiata Penne.jpg"
+                        alt="Spicy Arrabiata Penne"
+                    >
+                    <div class="meal-name">
+                        Spicy Arrabiata Penne
+                    </div>
+                </a>
+
+
+                <!-- 29 Spicy North African Potato Salad -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Spicy North African Potato Salad.jpg"
+                        alt="Spicy North African Potato Salad"
+                    >
+                    <div class="meal-name">
+                        Spicy North African Potato Salad
+                    </div>
+                </a>
+
+
+                <!-- 30 Spinach Ricotta Cannelloni -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Spinach and Ricotta Cannelloni.jpg"
+                        alt="Spinach and Ricotta Cannelloni"
+                    >
+                    <div class="meal-name">
+                        Spinach &amp; Ricotta Cannelloni
+                    </div>
+                </a>
+
+
+                <!-- 31 Squash Linguine -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Squash Linguine.jpg"
+                        alt="Squash Linguine"
+                    >
+                    <div class="meal-name">
+                        Squash linguine
+                    </div>
+                </a>
+
+
+                <!-- 32 Stovetop Eggplant -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Stovetop Eggplant With Harissa, Chickpeas, and Cumin Yogurt.jpg"
+                        alt="Stovetop Eggplant With Harissa Chickpeas and Cumin Yogurt"
+                    >
+                    <div class="meal-name">
+                        Stovetop Eggplant With Harissa, Chickpeas, and Cumin Yogurt
+                    </div>
+                </a>
+
+
+                <!-- 33 Stuffed Bell Peppers -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Stuffed Bell Peppers with Quinoa and Black Beans.jpg"
+                        alt="Stuffed Bell Peppers with Quinoa and Black Beans"
+                    >
+                    <div class="meal-name">
+                        Stuffed Bell Peppers with Quinoa and Black Beans
+                    </div>
+                </a>
+
+
+                <!-- 34 Summer Pistou -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Summer Pistou.jpg"
+                        alt="Summer Pistou"
+                    >
+                    <div class="meal-name">
+                        Summer Pistou
+                    </div>
+                </a>
+
+
+                <!-- 35 Tahini Lentils -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Tahini Lentils.jpg"
+                        alt="Tahini Lentils"
+                    >
+                    <div class="meal-name">
+                        Tahini Lentils
+                    </div>
+                </a>
+
+
+                <!-- 36 Tamiya -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Tamiya.jpg"
+                        alt="Tamiya"
+                    >
+                    <div class="meal-name">
+                        Tamiya
+                    </div>
+                </a>
+
+
+                <!-- 37 Tortang Talong -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Tortang Talong.jpg"
+                        alt="Tortang Talong"
+                    >
+                    <div class="meal-name">
+                        Tortang Talong
+                    </div>
+                </a>
+
+
+                <!-- 38 Vegetarian Casserole -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Vegetarian Casserole.jpg"
+                        alt="Vegetarian Casserole"
+                    >
+                    <div class="meal-name">
+                        Vegetarian Casserole
+                    </div>
+                </a>
+
+
+                <!-- 39 Vegetarian Chilli -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Vegetarian Chilli.jpg"
+                        alt="Vegetarian Chilli"
+                    >
+                    <div class="meal-name">
+                        Vegetarian Chilli
+                    </div>
+                </a>
+
+
+                <!-- 40 Yaki Udon -->
+                <a href="#" class="meal-card">
+                    <img
+                        src="assets/images/Yaki Udon.jpg"
+                        alt="Yaki Udon"
+                    >
+                    <div class="meal-name">
+                        Yaki Udon
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
 
     </main>
 
-    
 
+    <!-- =====================================================
+         BOOTSTRAP JS IS NOT REQUIRED
+         The menu works using CSS checkbox.
+    ====================================================== -->
+
+</body>
 </html>

@@ -1,0 +1,775 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111111;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.meal-navbar {
+    height: 52px;
+    width: 100%;
+    background-color: #ed5b16;
+    position: relative;
+    z-index: 2000;
+}
+
+.navbar-content {
+    height: 100%;
+    width: 100%;
+
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.meal-logo {
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    transition: 0.2s ease;
+}
+
+.meal-logo:hover {
+    color: #ffffff;
+}
+
+.meal-logo i {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    color: #ffffff;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+
+    transition: 0.2s ease;
+}
+
+.menu-button:hover {
+    color: #ffe4d6;
+}
+
+
+/* =========================================================
+   SIDE MENU
+========================================================= */
+
+.side-menu {
+    position: fixed;
+
+    top: 0;
+    right: -285px;
+
+    width: 285px;
+    height: 100vh;
+
+    background-color: #ffffff;
+
+    z-index: 3000;
+
+    padding: 24px;
+
+    box-shadow: -8px 0 25px rgba(0, 0, 0, 0.12);
+
+    transition: right 0.3s ease;
+
+    overflow-y: auto;
+}
+
+
+/* Open menu using checkbox */
+
+.menu-toggle:checked ~ .side-menu {
+    right: 0;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.close-button {
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    color: #ed5b16;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    margin-bottom: 20px;
+}
+
+.close-button:hover {
+    color: #c9470b;
+}
+
+
+/* =========================================================
+   SIDE NAVIGATION
+========================================================= */
+
+.side-navigation {
+    width: 100%;
+}
+
+.side-link {
+    display: block;
+
+    width: 100%;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+    color: #555555;
+
+    font-size: 14px;
+
+    letter-spacing: 0.2px;
+
+    transition: all 0.2s ease;
+}
+
+.side-link:hover {
+    color: #ed5b16;
+
+    padding-left: 7px;
+
+    background-color: #fafafa;
+}
+
+.active-link {
+    color: #555555;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-section {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 230px;
+
+    background-image:
+        url("assets/images/header_image.1dc0f346d407fc577d16.jpg");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* Dark overlay */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.48);
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 35px 15px 25px;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-form {
+    width: 100%;
+
+    max-width: 395px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.search-input {
+    width: 100%;
+
+    height: 48px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 30px;
+
+    background-color: #ffffff;
+
+    color: #555555;
+
+    padding: 0 27px;
+
+    font-size: 14px;
+
+    box-shadow: none;
+}
+
+.search-input::placeholder {
+    color: #777777;
+}
+
+
+/* Search Button */
+
+.search-button {
+    flex: 0 0 48px;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: 2px solid #ffffff;
+
+    background-color: #ed5b16;
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    transition: all 0.25s ease;
+}
+
+.search-button:hover {
+    background-color: #ffffff;
+    color: #ed5b16;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.hero-title {
+    color: #ffffff;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin: 0 0 14px;
+
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    margin: 0;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.vegetarian-main {
+    width: 100%;
+
+    background-color: #ffffff;
+
+    padding: 30px 13px 50px;
+}
+
+
+/* =========================================================
+   VEGETARIAN DESCRIPTION
+========================================================= */
+
+.vegetarian-description {
+    width: 100%;
+
+    border: 1px solid #ed5b16;
+
+    padding: 16px 14px;
+
+    margin-bottom: 52px;
+
+    background-color: #ffffff;
+}
+
+.vegetarian-description h2 {
+    color: #ed5b16;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    margin: 0 0 10px;
+}
+
+.vegetarian-description p {
+    color: #666666;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+
+    margin: 0;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+    color: #111111;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin: 0;
+}
+
+.section-line {
+    width: 50px;
+
+    height: 3px;
+
+    background-color: #ed5b16;
+
+    margin-top: 8px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   MEALS GRID
+========================================================= */
+
+.meals-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   MEAL CARD
+========================================================= */
+
+.meal-card {
+    display: block;
+
+    width: 100%;
+
+    background-color: #ffffff;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.06);
+
+    color: #111111;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.meal-card:hover {
+    color: #111111;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   MEAL IMAGE
+========================================================= */
+
+.meal-card img {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    background-color: #eeeeee;
+}
+
+
+/* =========================================================
+   MEAL NAME
+========================================================= */
+
+.meal-name {
+    min-height: 39px;
+
+    padding: 6px 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    background-color: #ffffff;
+
+    color: #111111;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero-title {
+        font-size: 25px;
+    }
+
+    .meals-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .meal-name {
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .meal-navbar {
+        height: 38px;
+    }
+
+    .navbar-content {
+        padding: 0 13px;
+    }
+
+    .meal-logo {
+        font-size: 14px;
+
+        gap: 4px;
+    }
+
+    .meal-logo i {
+        font-size: 11px;
+    }
+
+    .menu-button {
+        font-size: 18px;
+
+        width: 28px;
+        height: 28px;
+    }
+
+
+    /* Hero */
+
+    .hero-section {
+        min-height: 246px;
+
+        background-position: center;
+    }
+
+    .hero-content {
+        padding: 36px 12px 25px;
+    }
+
+    .search-form {
+        max-width: 250px;
+
+        gap: 6px;
+
+        margin-bottom: 20px;
+    }
+
+    .search-input {
+        height: 36px;
+
+        padding: 0 18px;
+
+        font-size: 11px;
+    }
+
+    .search-button {
+        width: 36px;
+        height: 36px;
+
+        flex-basis: 36px;
+
+        font-size: 12px;
+    }
+
+    .hero-title {
+        font-size: 20px;
+
+        letter-spacing: 0.5px;
+
+        margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+        font-size: 10px;
+
+        letter-spacing: 0.7px;
+    }
+
+
+    /* Main */
+
+    .vegetarian-main {
+        padding: 30px 12px 45px;
+    }
+
+
+    /* Description */
+
+    .vegetarian-description {
+        padding: 15px 14px;
+
+        margin-bottom: 52px;
+    }
+
+    .vegetarian-description h2 {
+        font-size: 15px;
+    }
+
+    .vegetarian-description p {
+        font-size: 11px;
+
+        line-height: 1.65;
+    }
+
+
+    /* Heading */
+
+    .section-heading {
+        font-size: 16px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .section-line {
+        width: 50px;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* 5 columns like screenshot */
+
+    .meals-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .meal-name {
+        min-height: 36px;
+
+        padding: 5px;
+
+        font-size: 8px;
+
+        line-height: 1.3;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero-section {
+        min-height: 225px;
+    }
+
+    .hero-content {
+        padding-top: 30px;
+    }
+
+    .search-form {
+        max-width: 230px;
+    }
+
+    .hero-title {
+        font-size: 17px;
+    }
+
+    .hero-subtitle {
+        font-size: 9px;
+    }
+
+    .vegetarian-description p {
+        font-size: 10px;
+    }
+
+    .meals-grid {
+        gap: 7px;
+    }
+
+    .meal-name {
+        font-size: 7px;
+
+        min-height: 34px;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .meals-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .meal-name {
+        font-size: 10px;
+
+        min-height: 40px;
+    }
+
+}

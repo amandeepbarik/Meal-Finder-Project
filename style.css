@@ -287,56 +287,82 @@ body {
     border-radius: 2px;
 }
 
-/* 4-Column Grid Layout */
-.categories-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+/* =========================================================
+   CATEGORIES
+========================================================= */
+
+.categories-section {
+    width: 100%;
 }
 
-/* Category Card Styling */
+.categories-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   CATEGORY CARD
+========================================================= */
+
 .category-card {
     position: relative;
+
     background-color: #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.06);
+
+    overflow: hidden;
+
+    transition: 0.2s ease;
 }
 
 .category-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 13px rgba(0, 0, 0, 0.12);
 }
 
-.category-badge {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    background-color: #e65100;
-    color: #ffffff;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 4px;
-    text-transform: uppercase;
-}
+.category-card img {
+    display: block;
 
-.card-img-wrapper {
     width: 100%;
-    max-width: 140px;
-    margin-top: 15px;
-}
 
-.category-img {
-    width: 100%;
-    height: auto;
+    aspect-ratio: 1.55 / 1;
+
     object-fit: contain;
+}
+
+
+/* Category label */
+
+.category-card span {
+    position: absolute;
+
+    top: 5px;
+    right: 5px;
+
+    z-index: 2;
+
+    background-color: #ed5b16;
+
+    color: #ffffff;
+
+    padding: 3px 6px;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    border-radius: 2px;
 }
 
 /* Responsive Grid for Smaller Screens */
